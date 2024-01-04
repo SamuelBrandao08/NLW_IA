@@ -11,18 +11,18 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 Content-Disposition: form-data; name="file"; filename="teste.mp3"
 Content-Type: audio/mpeg
 
-< ./teste.mp3
+< ./audio.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
 
 # @name create-transcription
 
-POST http://localhost:3333/videos/07d10141-7ee9-41c1-8944-e4cbe73df814/transcription
+POST http://localhost:3333/videos/e89b569b-0744-499f-b814-8512596b9983/transcription
 Content-Type: application/json
 
 {
-    "prompt": "listen, conversation, exercise"
+    "prompt": "biceps"
 }
 
 ###
@@ -33,7 +33,7 @@ POST http://localhost:3333/ai/complete
 Content-Type: application/json
 
 {
-    "videoId": "07d10141-7ee9-41c1-8944-e4cbe73df814",
+    "videoId": "0074605e-c534-47be-a2a0-ef161ac8a593",
     "temperature": 0.5,
-    "template": "Gere um resumo sucinto da transcrição do video informada a seguir: '''{transcription}'''"
+    "prompt": "Gere um resumo sucinto da transcrição do video informada a seguir: '''{transcription}'''"
 }
